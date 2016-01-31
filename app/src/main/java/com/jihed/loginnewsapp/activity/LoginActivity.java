@@ -119,7 +119,7 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             mProgressDialog = ProgressDialog.show(LoginActivity.this,
-                    "Connection...", "Check username and password", true, true);
+                    "Connection...", "Check username and password", true, false);
         }
 
         @Override
