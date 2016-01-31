@@ -12,10 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/welcomeView"
-        android:text="@string/welcome_string"
+        android:text="@string/welcome_2_string"
         android:textColor="@color/white"
         android:textSize="@dimen/welcome_view_text_size"
         android:textStyle="italic"
-        android:padding="@dimen/text_view_padding"/>
+        android:padding="@dimen/text_view_padding"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="142dp" />
 
 </RelativeLayout>

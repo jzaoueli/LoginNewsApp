@@ -2,6 +2,7 @@
     <string name="app_name">Login and News Project</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="welcome_string">,, welcome to :</string>
+    <string name="welcome_2_string">,, welcome :</string>
     <string name="login_string">Login Form ,,</string>
     <string name="user_name_hint_string">User Name</string>
     <string name="password_hint_string">Password</string>
