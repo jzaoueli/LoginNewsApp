@@ -45,9 +45,12 @@ public class JSONParser {
             HttpEntity httpEntity = httpResponse.getEntity();
 
             if (httpEntity != null) {
-                String resultString = EntityUtils.toString(httpEntity);
-                jsonObjectResult = new JSONObject(resultString.substring(resultString.indexOf("("), resultString.lastIndexOf(")") + 1));
+                jsonObjectResult = new JSONObject(EntityUtils.toString(httpEntity));
                 return jsonObjectResult;
+
+                /*String resultString = EntityUtils.toString(httpEntity);
+                jsonObjectResult = new JSONObject(resultString.substring(resultString.indexOf("("), resultString.lastIndexOf(")") + 1));
+                return jsonObjectResult;*/
             }
         } catch (Exception ex) {
             Log.e("lognew", "exception: " + ex.getMessage());
