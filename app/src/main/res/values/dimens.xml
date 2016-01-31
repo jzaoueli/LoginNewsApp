@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="welcome_view_text_size">25dp</dimen>
+    <dimen name="copyright_text_size">15dp</dimen>
+    <dimen name="form_name_text_size">40dp</dimen>
+    <dimen name="login_btn_text_size">30dp</dimen>
+    <dimen name="text_view_padding">5dp</dimen>
+    <dimen name="margin_top_login_form">20dp</dimen>
+    <dimen name="margin_top_password_view">15dp</dimen>
+</resources>
