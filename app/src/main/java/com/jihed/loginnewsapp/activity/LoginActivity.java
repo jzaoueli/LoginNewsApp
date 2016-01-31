@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button mLoginBtn;
     private Button mRegisterBtn;
     private JSONParser jsonParser = new JSONParser();
-    private String LOGIN_URL = "http://10.0.2.2:8080/newss/login.php";
+    private String LOGIN_URL = "http://192.168.2.123:8080/newss/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,8 +146,8 @@ public class LoginActivity extends AppCompatActivity {
             super.onPostExecute(aBoolean);
             mProgressDialog.dismiss();
             if (aBoolean) {
-                //Intent mIntent = new Intent(LoginActivity.this, MainActivity.class);
-                //startActivity(mIntent);
+                Intent mIntent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(mIntent);
                 Log.e("JSONObjectResult : ", jsonObjectResult +"");
             } else {
                 Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();
