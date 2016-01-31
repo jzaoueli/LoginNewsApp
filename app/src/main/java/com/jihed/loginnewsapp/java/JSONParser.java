@@ -23,7 +23,7 @@ import java.util.List;
 public class JSONParser {
     public JSONObject makeHttpRequest(String url , List<NameValuePair> pairs) {
 
-        JSONObject jsonObjectresult = new JSONObject();
+        JSONObject jsonObjectResult = new JSONObject();
 
         try {
             HttpParams httpParams = new BasicHttpParams();
@@ -45,17 +45,15 @@ public class JSONParser {
             HttpEntity httpEntity = httpResponse.getEntity();
 
             if (httpEntity != null) {
-                //String resultString = EntityUtils.toString(httpEntity);
-                jsonObjectresult = new JSONObject(EntityUtils.toString(httpEntity));
-                return jsonObjectresult;
-                //return new JSONObject(resultString.substring(resultString.indexOf("("), resultString.lastIndexOf(")") + 1));
+                String resultString = EntityUtils.toString(httpEntity);
+                jsonObjectResult = new JSONObject(resultString.substring(resultString.indexOf("("), resultString.lastIndexOf(")") + 1));
+                return jsonObjectResult;
             }
         } catch (Exception ex) {
-            //Log.e("connection error",ex.getMessage().toString());
             Log.e("lognew", "exception: " + ex.getMessage());
             ex.printStackTrace();
         }
 
-        return jsonObjectresult;
+        return jsonObjectResult;
     }
 }
